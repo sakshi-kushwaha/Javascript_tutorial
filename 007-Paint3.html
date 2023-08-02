@@ -1,1 +1,41 @@
+<!-- Just play around with the styles and make it look pretty, maybe try removing the borders of the boxes and see how that looks. -->
+
+<!DOCTYPE html>
+<html>
+    <body>
+     <div style="border: 5px solid blue" id='box-canvas'>
+</div>
+
+<script>
+    function paintTheBox(box_id){
+        document.getElementById(box_id).style.backgroundColor = "pink";
+    }
+
+    var canvas = document.getElementById('box-canvas')
+
+    for(var i=1; i<=200; i++){
+        var box = document.createElement('div');
+        box.setAttribute('class', 'box');
+        box.setAttribute('id', 'box' + i);
+        box.setAttribute('onclick', "paintTheBox('box" + i + "')");
+
+        canvas.appendChild(box);
+    }
+
+</script>
+<!-- Removing the borders of the box for making it invisble and now on clicking in the canvas box forms a box -->
+<style>
+.box {
+    height: 50px; 
+    width: 25px; 
+    
+    display: inline-block;
+}
+</style> 
+     
+    </body>
+</html>
+<!-- Could you think of a way to limit the size of our canvas?  -->
+<!-- YES, by setting the height and width for the canvas.It can be either max. or min. -->
+
 
