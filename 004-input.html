@@ -1,1 +1,30 @@
+<!-- Create different buttons for good morning and good evening. -->
+
+<!DOCTYPE html>
+<html>
+    <body>    
+     <h1 style="color:blue">The Greetings Website!</h1>
+<label>Hey there! what's your name?</label>
+<br>
+<input id='name' />
+<br>
+<br>
+<button onclick="showGE()">Greet me for evening!</button>
+<br>
+<br>
+<button onclick="showGM()">Greet me for morning!</button>
+<script>
+	function showGE(){
+		var user_name = document.getElementById('name').value
+		var custom_greeting = "Good Evening " + user_name 
+		alert(custom_greeting)
+	}
+    function showGM(){
+		var user_name = document.getElementById('name').value
+		var custom_greeting = "Good Morning " + user_name 
+		alert(custom_greeting)
+	}
+</script>
+    </body>
+</html>
 
